@@ -1,0 +1,4 @@
+$definebone "gun" "" 0 0 0 0 0 0 0 0 0 0 0 0
+$definebone "magazine" "gun" -7.620288 0.002204 1.323778 0 0 0 0 0 0 0 0 0
+$definebone "ophandle" "gun" 0.362333 0.386549 5.560584 0 0 -69.901939 0 0 0 0 0 0
+$definebone "safety" "gun" 2.394661 0.443654 3.661818 0 0 0 0 0 0 0 0 0
