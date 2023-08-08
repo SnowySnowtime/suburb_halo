@@ -1,6 +1,7 @@
 "UnlitGeneric"
 {
-	"$basetexture" "snowysnowtime/h3/rifles/battle_rifle/vgui/numbers_plate6"
+	"$basetexture" "models/snowysnowtime/suburb/halo/rifles/battlerifle/vgui/numbers_plate6"
+	"$color2" "[3 3 3]"
 	"$additive" "1"
 	$model 1
 	
@@ -9,7 +10,7 @@
 		halo_ammocounter
 		{
 			resultVar 1
-			prefixstring "snowysnowtime/h3/rifles/battle_rifle/vgui/numbers_plate"
+			prefixstring "models/snowysnowtime/suburb/halo/rifles/battlerifle/vgui/numbers_plate"
 		}
 	}
 }

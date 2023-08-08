@@ -1,4 +1,4 @@
-$modelname "weapons/rifle/battle_rifle.mdl"
+$modelname "snowysnowtime\suburb\halo\rifles\battle_rifle.mdl"
 
 $bodygroup "body"
 {
@@ -13,7 +13,7 @@ $contents "solid"
 
 $illumposition 0 0 0
 
-$cdmaterials "weapons\rifle\battle_rifle\"
+$cdmaterials "models\snowysnowtime\suburb\halo\rifles\battlerifle\"
 
 $cbox 0 0 0 0 0 0
 
@@ -27,3 +27,4 @@ $sequence "idle" {
 	rotate -90
 	fps 30
 }
+$include "_phy.qci"

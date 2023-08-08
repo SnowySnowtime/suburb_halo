@@ -5,9 +5,11 @@ $bodygroup "body"
 	blank
 	studio "fp_arms.smd"
 }
-$bodygroup "br"
+
+$bodygroup "battlerifle"
 {
 	studio "fp_battle_rifle.smd"
+	studio "fp_battle_rifle_og.smd"
 }
 $include "bones.qci"
 
