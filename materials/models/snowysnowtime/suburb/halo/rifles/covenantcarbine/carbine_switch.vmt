@@ -1,0 +1,6 @@
+"UnLitGeneric"
+{
+	"$basetexture" "models/snowysnowtime/suburb/halo/rifles/covenantcarbine/covenant_carbine_switch_up_illum"
+	"$additive" "1"
+	"$color2" "[0.1 1 0.1]"
+}

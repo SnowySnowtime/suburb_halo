@@ -20,6 +20,7 @@ $contents "solid"
 $illumposition 0 0 0
 
 $cdmaterials "models\snowysnowtime\suburb\halo\rifles\battlerifle\"
+$cdmaterials "models\snowysnowtime\suburb\halo\arms\"
 
 $cbox 0 0 0 0 0 0
 

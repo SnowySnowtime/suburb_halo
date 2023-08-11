@@ -1,0 +1,26 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models/snowysnowtime/suburb/halo/rifles/covenantcarbine/covenant_carbine"
+	"$bumpmap" "models/snowysnowtime/suburb/halo/rifles/covenantcarbine/covenant_carbine_bump"
+	"$additive" "1"
+	"$color2" "[0 0 0]"
+	"$phong" "1" 
+	"$phongboost" "10.9934895"
+	"$phongexponenttexture" "models/snowysnowtime/suburb/halo/rifles/covenantcarbine/covenant_carbine_exp"
+	"$phongfresnelranges" "[-0.05 0.1 5]"
+	"$phongtint" "{199 110 20}"
+	"$envmap" 			"env_cubemap"
+	"$envmapfallback"   "models/snowysnowtime/suburb/envmap_fallback"
+	"$envmaptint" "[ 1 1 1 ]"
+	"$cubemaptint"	"{199 110 20}"
+	"$envmapfresnel"	"1"
+	"$cubemappower"	0.15
+
+	Proxies
+	{
+		drc_ReflectionTint
+		{
+			resultVar $envmaptint
+		}
+	}
+}

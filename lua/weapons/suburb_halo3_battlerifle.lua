@@ -18,8 +18,7 @@ SWEP.WorldModel				= "models/snowysnowtime/suburb/h3/rifles/c_hum_br55hb.mdl"
 SWEP.VMWMClone				= { Pos = Vector(), Ang = Angle(), Size = Vector() }
 SWEP.ViewModelFOV			= 74
 
-SWEP.DefaultBodygroups = "0 3 0 0 1 4 2 7 0 0 0 2"
-SWEP.DefaultBodygroups = "0 0 0 0 0 0 0 0 0 0 0 1"
+SWEP.DefaultBodygroups = "0 0"
 SWEP.DefaultSkin = 0
 
 SWEP.ActivePose = {
