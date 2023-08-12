@@ -1,0 +1,16 @@
+"UnlitGeneric"
+{
+	"$basetexture" "models/snowysnowtime/suburb/halo/rifles/battlerifle/vgui/numbers_plate6"
+	"$color2" "[3 3 3]"
+	"$additive" "1"
+	$model 1
+	
+	Proxies // proxies are listed inside this block
+	{
+		halo_ammocounter
+		{
+			resultVar 1
+			prefixstring "models/snowysnowtime/suburb/halo/rifles/battlerifle/vgui/numbers_plate"
+		}
+	}
+}

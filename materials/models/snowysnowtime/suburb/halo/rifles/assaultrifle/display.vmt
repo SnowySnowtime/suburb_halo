@@ -1,0 +1,7 @@
+"UnlitGeneric"
+{
+	"$basetexture" "models/snowysnowtime/suburb/halo/rifles/assaultrifle/display"
+	"$color2" "[3 3 3]"
+	"$additive" "1"
+	"$model" 1
+}

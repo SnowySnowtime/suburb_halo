@@ -49,14 +49,7 @@ local halo = ")snowysnowtime/h3/battlerifle/fire_burst_h3/"
 local p1 = ")snowysnowtime/h3/battlerifle/eject_br/"
 local tail = ")/snowysnowtime/h3/assaultrifle/"
 SWEP.Sound_Blast			= {
-	{ s = halo.."battle_rifle_fire1.wav" },
-	{ s = halo.."battle_rifle_fire2.wav" },
-	{ s = halo.."battle_rifle_fire3.wav" },
-	{ s = halo.."battle_rifle_fire4.wav" },
-	{ s = halo.."battle_rifle_fire5.wav" },
-	{ s = halo.."battle_rifle_fire6.wav" },
-	{ s = halo.."battle_rifle_fire7.wav" },
-	{ s = halo.."battle_rifle_fire8.wav" },
+	{ s = "battlerifle.uc.fire" },
 }
 SWEP.Sound_Mech				= {
 	{ s = p1.."ejectshell.wav" },
@@ -99,9 +92,6 @@ SWEP.Firemodes				= {
 		PostBurstDelay = 0.28,
 		RunawayBurst = true,
 		AutoBurst = true
-	},
-	{
-		Mode = 1,
 	},
 }
 SWEP.SwayCorrection = 0.45
