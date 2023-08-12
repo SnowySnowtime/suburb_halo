@@ -76,7 +76,9 @@ SWEP.CameraCorrection					= Angle( 0, 0, -90 )
 SWEP.Primary.Ammo			= "smg1"
 SWEP.Primary.ClipSize		= 18
 SWEP.ChamberSize			= 0
-SWEP.Delay					= 1 / 5 -- 1(second) / Halo Delay (RPS)
+SWEP.Delay					= 0.17 
+-- >> For whatever fucking reason, semi-automatic weapons in halo do not use the RPS value, but fire recovery time. Just use the raw value from the H3EK/H3ODSTEK
+-- >> Why does all of the semi-automatic weapons in halo work this way??
 
 SWEP.Firemodes				= {
 	{
