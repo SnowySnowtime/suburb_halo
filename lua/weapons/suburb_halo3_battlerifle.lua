@@ -6,7 +6,7 @@ SWEP.Spawnable				= true
 -- Description
 --
 SWEP.PrintName				= "Battle Rifle"
-SWEP.Category				= "Cosmic Decay" -- sounds funny (ffrom stan_jacobs), probably wont keep but good for organizing
+SWEP.Category				= "Cosmic Decay" -- sounds funny (ffrom stan_jacobs), likely wont keep but good for organizing
 SWEP.Description			= [[BR55Heavy-Barrel Service Rifle]]
 SWEP.Slot					= 2
 
