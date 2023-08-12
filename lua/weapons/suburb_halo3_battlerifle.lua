@@ -6,7 +6,7 @@ SWEP.Spawnable				= true
 -- Description
 --
 SWEP.PrintName				= "Battle Rifle"
-SWEP.Category				= "Urban Coalition"
+SWEP.Category				= "Cosmic Decay" -- sounds funny (ffrom stan_jacobs), probably wont keep but good for organizing
 SWEP.Description			= [[BR55Heavy-Barrel Service Rifle]]
 SWEP.Slot					= 2
 
@@ -16,7 +16,7 @@ SWEP.Slot					= 2
 SWEP.ViewModel				= "models/snowysnowtime/suburb/halo/rifles/fp_battle_rifle.mdl"
 SWEP.WorldModel				= "models/snowysnowtime/suburb/h3/rifles/c_hum_br55hb.mdl"
 SWEP.VMWMClone				= { Pos = Vector(), Ang = Angle(), Size = Vector() }
-SWEP.ViewModelFOV			= 74
+SWEP.ViewModelFOV			= 54 -- Make an attachment later to allow users to swap between 54/74 ViewModelFOV
 
 SWEP.DefaultBodygroups = "0 0"
 SWEP.DefaultSkin = 0

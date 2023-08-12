@@ -67,3 +67,34 @@ sound.Add(
 	halo..car.."carbine_atlas3.wav",
 	}
 })
+
+sound.Add(
+{
+    name = "shotgun.uc.fire",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 115,
+	pitch = {98,102},
+    sound = {halo..sg.."shotgun1.wav",
+	halo..sg.."shotgun2.wav",
+	halo..sg.."shotgun3.wav",
+	}
+})
+
+sound.Add(
+{
+    name = "shotgun.uc.reload",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 90,
+	pitch = {98,102},
+    sound = {halo..sg.."shotgun_reload_loop1.wav",
+	halo..sg.."shotgun_reload_loop2.wav",
+	halo..sg.."shotgun_reload_loop3.wav",
+	halo..sg.."shotgun_reload_loop4.wav",
+	halo..sg.."shotgun_reload_loop5.wav",
+	halo..sg.."shotgun_reload_loop6.wav",
+	halo..sg.."shotgun_reload_loop7.wav",
+	halo..sg.."shotgun_reload_loop8.wav",
+	}
+})
