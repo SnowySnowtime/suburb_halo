@@ -1,4 +1,4 @@
-$modelname "snowysnowtime\suburb\halo\rifles\fp_battle_rifle.mdl"
+$modelname "snowysnowtime\suburb\halo\rifles\fp_sniper_rifle.mdl"
 
 $bodygroup "body"
 {
@@ -8,8 +8,7 @@ $bodygroup "body"
 
 $bodygroup "battlerifle"
 {
-	studio "fp_battle_rifle.smd"
-	studio "fp_battle_rifle_og.smd"
+	studio "fp_sniper_rifle.smd"
 }
 $include "bones.qci"
 
@@ -19,7 +18,7 @@ $contents "solid"
 
 $illumposition 0 0 0
 
-$cdmaterials "models\snowysnowtime\suburb\halo\rifles\battlerifle\"
+$cdmaterials "models\snowysnowtime\suburb\halo\rifles\sniperrifle\"
 $cdmaterials "models\snowysnowtime\suburb\halo\arms\"
 
 $cbox 0 0 0 0 0 0
@@ -47,6 +46,10 @@ $animation "look_u_pos" "anims/first_person overlays.smd" fps 30 rotate -90 subt
 $animation "look_d" "anims/first_person overlays.smd" fps 30 rotate -90 subtract "idle_0" 0 frame 10 10
 $animation "look_d_pos" "anims/first_person overlays.smd" fps 30 rotate -90 subtract "idle_0" 0 frame 3 3
 
+$animation "look_pitch_2" "anims/first_person pitch_and_turn.smd" fps 30 rotate -90 subtract "idle_0" 0 frame 7 7
+$animation "look_pitch_0" "anims/first_person pitch_and_turn.smd" fps 30 rotate -90 subtract "idle_0" 0 frame 0 0
+$animation "look_pitch_1" "anims/first_person pitch_and_turn.smd" fps 30 rotate -90 subtract "idle_0" 0 frame 5 5
+
 $sequence "idle_raw" {
 	"anims\first_person idle.smd"
 	activity "ACT_VM_IACT_VM_PULLBACK_LOW" 1
@@ -66,6 +69,7 @@ $sequence "idle_1" {
 	addlayer look_x_pos
 	addlayer look_y
 	addlayer look_y_pos
+	addlayer look_pitch_s
 	blendwidth 3
 	fadein 0.1
 	fadeout 0
@@ -134,6 +138,22 @@ $sequence "look_y_pos" {
 	hidden
 }
 
+$sequence "look_pitch_s" {
+	"look_pitch_2"
+	"look_pitch_0"
+	"look_pitch_1"
+	activity "ACT_VM_IDLE" 1
+	blend "look_x" -1 1
+	delta
+	blendwidth 3
+	fadein 0.1
+	fadeout 0
+	rotate -90
+	loop
+	fps 30
+	hidden
+}
+
 $sequence "fire_1 var1" {
 	"anims\first_person fire_1 var1.smd"
 	activity "ACT_VM_PRIMARYATTACK" 1
@@ -142,6 +162,7 @@ $sequence "fire_1 var1" {
 	addlayer look_x_pos
 	addlayer look_y
 	addlayer look_y_pos
+	addlayer look_pitch_s
 	fadein 0.05
 	fadeout 0.2
 	node "1"
@@ -157,6 +178,7 @@ $sequence "fire_1 var2" {
 	addlayer look_x_pos
 	addlayer look_y
 	addlayer look_y_pos
+	addlayer look_pitch_s
 	fadein 0.05
 	fadeout 0.2
 	node "1"
@@ -172,6 +194,7 @@ $sequence "fire_1 var3" {
 	addlayer look_x_pos
 	addlayer look_y
 	addlayer look_y_pos
+	addlayer look_pitch_s
 	fadein 0.05
 	fadeout 0.2
 	node "1"
@@ -204,6 +227,7 @@ $sequence "ready" {
 	addlayer look_x_pos
 	addlayer look_y
 	addlayer look_y_pos
+	addlayer look_pitch_s
 	fadein 0.2
 	fadeout 0.2
 	rotate -90
@@ -217,6 +241,7 @@ $sequence "put_away" {
 	addlayer look_x_pos
 	addlayer look_y
 	addlayer look_y_pos
+	addlayer look_pitch_s
 	fadein 0.2
 	fadeout 0.2
 	rotate -90
@@ -225,15 +250,6 @@ $sequence "put_away" {
 
 $sequence "melee_strike_1" {
 	"anims\first_person melee_strike_1.smd"
-	activity "ACT_VM_HITCENTER" 1
-	fadein 0.1
-	fadeout 0.2
-	rotate -90
-	fps 30
-}
-
-$sequence "melee_strike_2" {
-	"anims\first_person melee_strike_2.smd"
 	activity "ACT_VM_HITCENTER" 1
 	fadein 0.1
 	fadeout 0.2

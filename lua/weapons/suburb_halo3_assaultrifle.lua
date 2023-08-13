@@ -169,7 +169,7 @@ SWEP.Animations				= {
 		Events = {
 			{ t = 0.1,			s = {halo.."ar_reload0-0.wav",halo.."ar_reload1-0.wav"} },
 			{ t = 0.9,			s = {halo.."ar_reload0-1.wav",halo.."ar_reload1-1.wav"} },
-			{ t = 1.425,			s = {halo.."ar_reload0-2.wav",halo.."ar_reload1-2.wav"} },
+			{ t = 1.425,			s = {halo.."ar_reload0-2.wav",halo.."ar_reload1-2.wav",halo.."ar_reload2-2.wav"} },
 		},
 		ReloadingTime = 2.0,
 		LoadIn = 1.5,
@@ -179,7 +179,7 @@ SWEP.Animations				= {
 		Events = {
 			{ t = 0.1,			s = {halo.."ar_reload0-0.wav",halo.."ar_reload1-0.wav"} },
 			{ t = 0.9,			s = {halo.."ar_reload0-1.wav",halo.."ar_reload1-1.wav"} },
-			{ t = 1.425,			s = {halo.."ar_reload0-2.wav",halo.."ar_reload1-2.wav"} },
+			{ t = 1.425,			s = {halo.."ar_reload0-2.wav",halo.."ar_reload1-2.wav",halo.."ar_reload2-2.wav"} },
 		},
 		ReloadingTime = 2.0,
 		LoadIn = 1.5,

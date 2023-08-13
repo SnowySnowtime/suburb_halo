@@ -98,3 +98,17 @@ sound.Add(
 	halo..sg.."shotgun_reload_loop8.wav",
 	}
 })
+
+sound.Add(
+{
+    name = "sniperrifle.uc.fire",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 115,
+	pitch = {98,102},
+    sound = {halo..sr.."sniper_fire_h3_1.wav",
+	halo..sr.."sniper_fire_h3_2.wav",
+	halo..sr.."sniper_fire_h3_3.wav",
+	halo..sr.."sniper_fire_h3_4.wav",
+	}
+})

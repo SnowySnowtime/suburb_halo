@@ -1,0 +1,51 @@
+UnlitGeneric
+{
+	$basetexture	"_RT_FullFrameFB"
+	$detail 		"_RT_FullFrameFB"
+
+	$detailscale	1
+	$detailblendfactor	25
+	$detailblendmode	1
+
+	$color2	"[ 0 1 0 ]"
+
+	$translucent	1
+
+	$center	"[ 0.5 0.5 ]"
+	$scale	"[ 0.035 0.035 ]"
+	$scale2	"[ 1 1 ]"
+	$rotate	"0"
+	$translate	"[ 0 0 ]"
+
+	$zero	0
+	$one	1
+	$two	2
+
+	$ll_ls	0.5
+	$ll_colourfrom	"[ 0 5 0 ]"
+	$ll_colourto	"[ 0 2 0 ]"
+
+	Proxies
+	{
+		TextureTransform
+		{
+			centerVar "$center"
+			scaleVar	"$scale"
+			rotateVar	"$rotate"
+			translateVar	"$translate"
+			resultVar	"$basetexturetransform"
+		}
+		TextureTransform
+		{
+			centerVar "$center"
+			scaleVar	"$scale"
+			rotateVar	"$rotate"
+			translateVar	"$translate"
+			resultVar	"$detailtexturetransform"
+		}
+		drc_LL_HitPos
+		{
+			resultVar $color2
+		}	
+	}
+}
