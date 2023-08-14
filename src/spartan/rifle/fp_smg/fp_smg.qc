@@ -94,6 +94,7 @@ $sequence "idle_1" {
 	addlayer look_y
 	addlayer look_x_pos
 	addlayer look_pitch_s
+	loop
 	fps 30
 }
 

@@ -156,7 +156,6 @@ $sequence "look_y_pos" {
 $sequence "fire_1 var1" {
 	"anims\first_person fire_1 var1.smd"
 	activity "ACT_VM_PRIMARYATTACK" 1
-	{ event AE_CL_PLAYSOUND 0 "halo_eject_rifle" }
 	addlayer look_x
 	addlayer look_x_pos
 	addlayer look_y
@@ -172,7 +171,6 @@ $sequence "fire_1 var1" {
 $sequence "fire_1 var2" {
 	"anims\first_person fire_1 var2.smd"
 	activity "ACT_VM_PRIMARYATTACK" 1
-	{ event AE_CL_PLAYSOUND 0 "halo_eject_rifle" }
 	addlayer look_x
 	addlayer look_x_pos
 	addlayer look_y
@@ -188,7 +186,6 @@ $sequence "fire_1 var2" {
 $sequence "fire_1 var3" {
 	"anims\first_person fire_1 var3.smd"
 	activity "ACT_VM_PRIMARYATTACK" 1
-	{ event AE_CL_PLAYSOUND 0 "halo_eject_rifle" }
 	addlayer look_x
 	addlayer look_x_pos
 	addlayer look_y
