@@ -198,10 +198,20 @@ SWEP.Animations				= {
 
 SWEP.Attachments = {
 	{
-		Name = "Trolling",
-		SortOrder = 1.0,
+		Name = "Grenade Type",
+		SortOrder = 2.0,
 		Icon = Material("entities/att/acwatt_ud_m16_rs_kac.png", "mips smooth"),
-		Slot = "ye",
+		Slot = "h3grenade",
+
+		Bone = "gun",
+		Pos = Vector(-1.652, 0, 0.5),
+		Ang = Angle(90, -90, 0)
+	},
+	{
+		Name = "Equipment Type",
+		SortOrder = 3.0,
+		Icon = Material("entities/att/acwatt_ud_m16_rs_kac.png", "mips smooth"),
+		Slot = "h3equipment",
 
 		Bone = "gun",
 		Pos = Vector(-1.652, 0, 0.5),

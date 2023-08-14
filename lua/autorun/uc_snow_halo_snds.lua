@@ -24,6 +24,8 @@ local smg 	= "smg/"
 local sp 	= "spiker/"
 local sr 	= "sniperrifle/"
 
+local shrd 	= "shared/"
+
 sound.Add(
 {
     name = "assaultrifle.uc.fire",
@@ -101,6 +103,19 @@ sound.Add(
 
 sound.Add(
 {
+    name = "smgsocom.uc.fire",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 115,
+	pitch = {98,102},
+    sound = {halo..smg.."smg_recon1.wav",
+	halo..smg.."smg_recon2.wav",
+	halo..smg.."smg_recon3.wav",
+	}
+})
+
+sound.Add(
+{
     name = "sniperrifle.uc.fire",
     channel = CHAN_STATIC,
     volume = 1.0,
@@ -110,5 +125,23 @@ sound.Add(
 	halo..sr.."sniper_fire_h3_2.wav",
 	halo..sr.."sniper_fire_h3_3.wav",
 	halo..sr.."sniper_fire_h3_4.wav",
+	}
+})
+
+--[[
+funny
+--]]
+
+sound.Add(
+{
+    name = "halo.uc.grenade_throw_generic",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 115,
+	pitch = {98,102},
+    sound = {halo..shrd.."claymore_thrown.wav",
+	halo..shrd.."frag_thrown.wav",
+	halo..shrd.."plas_thrown.wav",
+	halo..shrd.."firebomb_thrown.wav",
 	}
 })

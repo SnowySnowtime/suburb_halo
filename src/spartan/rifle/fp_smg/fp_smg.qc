@@ -2,6 +2,7 @@ $modelname "snowysnowtime\suburb\halo\rifles\fp_smg.mdl"
 
 $bodygroup "body"
 {
+	blank
 	studio "fp_arms.smd"
 }
 
@@ -9,11 +10,20 @@ $bodygroup "smg"
 {
 	studio "fp_smg.smd"
 }
-
+$bodygroup "dual"
+{
+	blank
+	studio "fp_smg_dual.smd"
+}
 $bodygroup "suppressor"
 {
 	blank
 	studio "socom.smd"
+}
+$bodygroup "suppressor dual"
+{
+	blank
+	studio "socom_dual.smd"
 }
 $include "bones.qci"
 
@@ -36,6 +46,10 @@ $poseparameter "move_x" -1 1 loop 0
 $poseparameter "move_y" -1 1 loop 0
 $poseparameter "look_x" -1 1 loop 0
 $poseparameter "look_y" -1 1 loop 0
+
+//-----------------------------------------------------------------------------------
+// define all of the blends
+//-----------------------------------------------------------------------------------
 
 $animation "idle" "anims/first_person idle.smd" fps 30 rotate -90 frame 0 1
 $animation "idle_0" "anims/first_person idle.smd" fps 30 rotate -90 frame 0 0
@@ -61,6 +75,13 @@ $animation "look_d_pos" "anims/first_person overlays.smd" fps 30 rotate -90 subt
 $animation "look_pitch_2" "anims/first_person pitch_and_turn.smd" fps 30 rotate -90 subtract "pitch_rest" 0 frame 7 7
 $animation "look_pitch_0" "anims/first_person pitch_and_turn.smd" fps 30 rotate -90 subtract "pitch_rest" 0 frame 0 0
 $animation "look_pitch_1" "anims/first_person pitch_and_turn.smd" fps 30 rotate -90 subtract "pitch_rest" 0 frame 5 5
+
+//-----------------------------------------------------------------------------------
+// define all of the dual wield blends
+//-----------------------------------------------------------------------------------
+
+$animation "dualwield_idle" "anims/first_person dual idle var0.smd" fps 30 rotate -90
+$animation "l_dualwield_idle" "anims/first_person dual idle var0_l.smd" fps 30 rotate -90 subtract "dualwield_idle" 0 frame 0 0
 
 $sequence "idle_1" {
 	"idling"
@@ -173,7 +194,6 @@ $sequence "look_pitch_s" {
 $sequence "fire_1 var1" {
 	"anims\first_person fire_1.smd"
 	activity "ACT_VM_PRIMARYATTACK" 1
-	{ event AE_CL_PLAYSOUND 0 "halo_eject_rifle" }
 	addlayer look_x
 	addlayer look_x_pos
 	addlayer look_y
@@ -276,3 +296,7 @@ $sequence "throw_equipment" {
 	rotate -90
 	fps 30
 }
+
+//-----------------------------------------------------------------------------------
+// dual wield shenanigans
+//-----------------------------------------------------------------------------------
