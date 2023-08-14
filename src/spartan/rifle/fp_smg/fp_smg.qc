@@ -2,7 +2,6 @@ $modelname "snowysnowtime\suburb\halo\rifles\fp_smg.mdl"
 
 $bodygroup "body"
 {
-	blank
 	studio "fp_arms.smd"
 }
 
@@ -38,50 +37,59 @@ $poseparameter "move_y" -1 1 loop 0
 $poseparameter "look_x" -1 1 loop 0
 $poseparameter "look_y" -1 1 loop 0
 
-$animation "walk" "anims/first_person moving.smd" fps 30 rotate -90
-$animation "walk_back" "anims/first_person moving_reversed.smd" fps 30 rotate -90
-$animation "idle" "anims/first_person idle.smd" fps 30 rotate -90
+$animation "idle" "anims/first_person idle.smd" fps 30 rotate -90 frame 0 1
 $animation "idle_0" "anims/first_person idle.smd" fps 30 rotate -90 frame 0 0
+$animation "idling" "anims/first_person idle.smd" fps 30 rotate -90
+$animation "walk_0" "anims/first_person moving.smd" fps 30 rotate -90 frame 0 0
+$animation "walk_rest" "anims/first_person moving.smd" fps 60 subtract "walk_0" 0 rotate -90 frame 0 0
+$animation "walk" "anims/first_person moving.smd" fps 60 subtract "walk_0" 0 rotate -90
+$animation "walk_back" "anims/first_person moving_reversed.smd" fps 60 subtract "walk_0" 0 rotate -90
+$animation "look_rest" "anims/first_person overlays.smd" fps 30 rotate -90 frame 0 0
+$animation "pitch_rest" "anims/first_person pitch_and_turn.smd" fps 30 rotate -90 frame 0 0
 
-$animation "look_r" "anims/first_person overlays.smd" fps 30 rotate -90 subtract "idle_0" 0 frame 8 8
-$animation "look_r_pos" "anims/first_person overlays.smd" fps 30 rotate -90 subtract "idle_0" 0 frame 4 4
-$animation "look_l" "anims/first_person overlays.smd" fps 30 rotate -90 subtract "idle_0" 0 frame 7 7
-$animation "look_l_pos" "anims/first_person overlays.smd" fps 30 rotate -90 subtract "idle_0" 0 frame 5 5
-$animation "look_u" "anims/first_person overlays.smd" fps 30 rotate -90 subtract "idle_0" 0 frame 9 9
-$animation "look_u_pos" "anims/first_person overlays.smd" fps 30 rotate -90 subtract "idle_0" 0 frame 2 2
-$animation "look_d" "anims/first_person overlays.smd" fps 30 rotate -90 subtract "idle_0" 0 frame 10 10
-$animation "look_d_pos" "anims/first_person overlays.smd" fps 30 rotate -90 subtract "idle_0" 0 frame 3 3
+$animation "look_0" "anims/first_person overlays.smd" fps 30 rotate -90 subtract "look_rest" 0 frame 6 6
+$animation "look_r" "anims/first_person overlays.smd" fps 30 rotate -90 subtract "look_rest" 0 frame 9 9
+$animation "look_r_pos" "anims/first_person overlays.smd" fps 30 rotate -90 subtract "look_rest" 0 frame 4 4
+$animation "look_l" "anims/first_person overlays.smd" fps 30 rotate -90 subtract "look_rest" 0 frame 10 10
+$animation "look_l_pos" "anims/first_person overlays.smd" fps 30 rotate -90 subtract "look_rest" 0 frame 5 5
+$animation "look_u" "anims/first_person overlays.smd" fps 30 rotate -90 subtract "look_rest" 0 frame 7 7
+$animation "look_d" "anims/first_person overlays.smd" fps 30 rotate -90 subtract "look_rest" 0 frame 8 8
 
-$animation "look_pitch_2" "anims/first_person pitch_and_turn.smd" fps 30 rotate -90 subtract "idle_0" 0 frame 7 7
-$animation "look_pitch_0" "anims/first_person pitch_and_turn.smd" fps 30 rotate -90 subtract "idle_0" 0 frame 0 0
-$animation "look_pitch_1" "anims/first_person pitch_and_turn.smd" fps 30 rotate -90 subtract "idle_0" 0 frame 5 5
+$animation "look_u_pos" "anims/first_person overlays.smd" fps 30 rotate -90 subtract "look_rest" 0 frame 1 1
+$animation "look_d_pos" "anims/first_person overlays.smd" fps 30 rotate -90 subtract "look_rest" 0 frame 2 2
 
-$sequence "idle_raw" {
-	"anims\first_person idle.smd"
+$animation "look_pitch_2" "anims/first_person pitch_and_turn.smd" fps 30 rotate -90 subtract "pitch_rest" 0 frame 7 7
+$animation "look_pitch_0" "anims/first_person pitch_and_turn.smd" fps 30 rotate -90 subtract "pitch_rest" 0 frame 0 0
+$animation "look_pitch_1" "anims/first_person pitch_and_turn.smd" fps 30 rotate -90 subtract "pitch_rest" 0 frame 5 5
+
+$sequence "idle_1" {
+	"idling"
 	activity "ACT_VM_IACT_VM_PULLBACK_LOW" 1
 	fadein 0.1
 	fadeout 0
 	rotate -90
+	addlayer walking
+	addlayer look_x
+	addlayer look_y
+	addlayer look_x_pos
+	addlayer look_pitch_s
 	fps 30
 }
 
-$sequence "idle_1" {
+$sequence "walking" {
 	"walk_back"
-	"idle"
+	"walk_rest"
 	"walk"
 	activity "ACT_VM_IDLE" 1
 	blend "move_x" -1 1
-	addlayer look_x
-	addlayer look_x_pos
-	addlayer look_y
-	addlayer look_y_pos
-	addlayer look_pitch_s
 	blendwidth 3
+	delta
 	fadein 0.1
 	fadeout 0
 	rotate -90
 	loop
 	fps 30
+	hidden
 }
 
 $sequence "look_x" {
@@ -116,11 +124,12 @@ $sequence "look_y" {
 
 $sequence "look_x_pos" {
 	"look_r_pos"
+	"look_0"
 	"look_l_pos"
 	activity "ACT_VM_IDLE" 1
 	blend "move_y" -1 1
 	delta
-	blendwidth 2
+	blendwidth 3
 	fadein 0.1
 	fadeout 0
 	rotate -90
@@ -131,11 +140,12 @@ $sequence "look_x_pos" {
 
 $sequence "look_y_pos" {
 	"look_d_pos"
+	"look_0"
 	"look_u_pos"
 	activity "ACT_VM_IDLE" 1
 	blend "move_x" -1 1
 	delta
-	blendwidth 2
+	blendwidth 3
 	fadein 0.1
 	fadeout 0
 	rotate -90
