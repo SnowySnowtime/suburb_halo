@@ -59,6 +59,18 @@ sound.Add(
 
 sound.Add(
 {
+    name = "beamrifle.uc.fire",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 115,
+	pitch = {98,102},
+    sound = {halo..beam.."cov_snip_shot9.wav",
+	halo..beam.."cov_snip_shot10.wav",
+	}
+})
+
+sound.Add(
+{
     name = "covenantcarbine.uc.fire",
     channel = CHAN_STATIC,
     volume = 1.0,

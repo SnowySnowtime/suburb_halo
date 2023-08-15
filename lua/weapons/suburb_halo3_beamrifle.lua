@@ -45,19 +45,25 @@ SWEP.HoldTypeSight			= "rpg"
 SWEP.HoldTypeSprint			= "passive"
 
 local p0 = ")arccw_uc/common/"
-local halo = ")snowysnowtime/h3/covenantcarbine/"
+local halo = ")snowysnowtime/h3/beamrifle/"
 SWEP.Sound_Blast			= {
-	{ s = "covenantcarbine.uc.fire" },
+	{ s = "beamrifle.uc.fire" },
+}
+SWEP.Sound_Mech			= {
+	{ s = halo.."first_person_fire1.wav" },
+	{ s = halo.."first_person_fire2.wav" },
+	{ s = halo.."first_person_fire3.wav" },
+	{ s = halo.."first_person_fire4.wav" },
 }
 SWEP.Sound_TailEXT				= {
-	{ s = halo.."carbine_tail_ext1.wav" },
-	{ s = halo.."carbine_tail_ext2.wav" },
-	{ s = halo.."carbine_tail_ext3.wav" },
+	{ s = halo.."beam_rifle_tail_ext1.wav" },
+	{ s = halo.."beam_rifle_tail_ext2.wav" },
+	{ s = halo.."beam_rifle_tail_ext3.wav" },
 }
 SWEP.Sound_TailINT				= {
-	{ s = halo.."carbine_tail_int1.wav" },
-	{ s = halo.."carbine_tail_int2.wav" },
-	{ s = halo.."carbine_tail_int3.wav" },
+	{ s = halo.."beam_rifle_tail_int1.wav" },
+	{ s = halo.."beam_rifle_tail_int2.wav" },
+	{ s = halo.."beam_rifle_tail_int3.wav" },
 }
 
 SWEP.MuzzleEffect						= "muzzleflash_1"
@@ -74,11 +80,13 @@ SWEP.CameraCorrection					= Angle( 0, 0, -90 )
 -- Functionality
 --
 SWEP.Primary.Ammo			= "smg1"
-SWEP.Primary.ClipSize		= 18
+SWEP.Primary.ClipSize		= 4
 SWEP.ChamberSize			= 0
-SWEP.Delay					= 0.17 
+SWEP.Delay					= 0.4
 -- >> For whatever fucking reason, semi-automatic weapons in halo do not use the RPS value, but fire recovery time. Just use the raw value from the H3EK/H3ODSTEK
 -- >> Why does all of the semi-automatic weapons in halo work this way??
+
+SWEP.ShotgunReloading		= true -- Set to 0 when battery base is ready. Probably.
 
 SWEP.Firemodes				= {
 	{
@@ -137,7 +145,7 @@ SWEP.Animations				= {
 	["draw"]	= {
 		Source = "ready",
 		Events = {
-			{ t = 0.0,			s = {halo.."carbine_draw1.wav",halo.."carbine_draw2.wav",halo.."carbine_draw3.wav"} },
+			{ t = 0.0,			s = {halo.."fp_beam_ready_1.wav",halo.."fp_beam_ready_2.wav",halo.."fp_beam_ready_3.wav"} },
 		},
 		ReloadingTime = 0.3,
 		StopSightTime = 0.1,
@@ -165,27 +173,36 @@ SWEP.Animations				= {
 		Source = {"fire_1 var1", "fire_1 var2", "fire_1 var3"},
 		ShellEjectTime = 0,
 	},
-	["reload"]	= {
-		Source = "reload",
+	["sgreload_start"] = {
+		Source = "o_h_start",
 		Events = {
-			{ t = 0.05,			s = halo.."carbine_reload1-1.wav" },
-			{ t = 0.25,			s = halo.."carbine_reload1-2.wav" },
-			{ t = 1.35,			s = halo.."carbine_reload1-3.wav" },
-			{ t = 1.8,			s = halo.."carbine_reload1-4.wav" },
+			{ t = 0.0,			s = {halo.."in.wav",halo.."in2.wav",halo.."in3.wav"} },
 		},
-		ReloadingTime = 2.0,
-		LoadIn = 1.5,
+		ShotgunReloadingTime = 1.5,
 	},
-	["reload_empty"] = {
-		Source = "reload",
+	["sgreload_insert"] = {
+		Source = "o_h_loop",
 		Events = {
-			{ t = 0.05,			s = halo.."carbine_reload1-1.wav" },
-			{ t = 0.25,			s = halo.."carbine_reload1-2.wav" },
-			{ t = 1.35,			s = halo.."carbine_reload1-3.wav" },
-			{ t = 1.8,			s = halo.."carbine_reload1-4.wav" },
+			-- { t = 0.0,			s = halo.."loop.wav" },
 		},
-		ReloadingTime = 2.0,
-		LoadIn = 1.5,
+		LoadIn = 0.2,
+		AmountToLoad = 1,
+		ShotgunReloadingTime = 0.3,
+	},
+	["sgreload_finish"] = {
+		Source = "o_h_exit",
+		Events = {
+			{ t = 0.0,			s = halo.."out.wav" },
+		},
+		ReloadingTime = 0,
+	},
+	["sgreload_finish_empty"] = {
+		Source = "o_h_exit",
+		Time = 1,
+		Events = {
+			{ t = 0.0,			s = halo.."out.wav" },
+		},
+		ReloadingTime = 0,
 	},
 }
 

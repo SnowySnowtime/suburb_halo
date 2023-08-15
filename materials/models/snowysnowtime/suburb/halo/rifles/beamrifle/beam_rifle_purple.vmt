@@ -5,18 +5,14 @@
 	"$additive" "1"
 	"$color2" "[0 0 0]"
 	"$phong" "1" 
-	"$phongboost" "15.9934895"
+	"$phongboost" "4"
 	"$phongexponenttexture" "models/snowysnowtime/suburb/halo/rifles/beamrifle/beam_rifle_exp"
-	"$phongtint" "{110 36 139}"
-	"$phongfresnelranges" "[1 0.1 -0.3]"
-	"$phongdisablehalflambert" "1"
-	"$rimlight"	1
-	"$rimlightpower"	10
-	"$rimmask"	1
+	"$phongtint" "{26 22 89}"
+	"$phongfresnelranges" "[-0.05 0.1 5]"
 	"$envmap" 			"env_cubemap"
 	"$envmapfallback"   "models/snowysnowtime/suburb/envmap_fallback"
 	"$envmaptint" "[ 1 1 1 ]"
-	"$cubemaptint"	"{110 36 139}"
+	"$cubemaptint"	"{26 22 89}"
 	"$cubemappower"	0.4
 
 	Proxies
