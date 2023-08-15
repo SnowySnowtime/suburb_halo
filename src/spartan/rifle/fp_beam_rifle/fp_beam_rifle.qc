@@ -2,6 +2,7 @@ $modelname "snowysnowtime\suburb\halo\rifles\fp_beam_rifle.mdl"
 
 $bodygroup "body"
 {
+	blank
 	studio "fp_arms.smd"
 }
 
@@ -9,6 +10,7 @@ $bodygroup "beamrifle"
 {
 	studio "fp_beam_rifle.smd"
 }
+$include "bones.qci"
 
 $surfaceprop "default"
 
@@ -36,9 +38,9 @@ $animation "idle" "anims/first_person idle.smd" fps 30 rotate -90
 $animation "idle_0" "anims/first_person idle_fix.smd" fps 30 rotate -90 frame 0 0
 
 $animation "look_r" "anims/first_person overlays.smd" fps 30 rotate -90 subtract "idle_0" 0 frame 8 8
-$animation "look_r_pos" "anims/first_person overlays.smd" fps 30 rotate -90 subtract "idle_0" 0 frame 4 4
+$animation "look_r_pos" "anims/first_person overlays.smd" fps 30 rotate -90 subtract "idle_0" 0 frame 5 5
 $animation "look_l" "anims/first_person overlays.smd" fps 30 rotate -90 subtract "idle_0" 0 frame 9 9
-$animation "look_l_pos" "anims/first_person overlays.smd" fps 30 rotate -90 subtract "idle_0" 0 frame 5 5
+$animation "look_l_pos" "anims/first_person overlays.smd" fps 30 rotate -90 subtract "idle_0" 0 frame 4 4
 $animation "look_u" "anims/first_person overlays.smd" fps 30 rotate -90 subtract "idle_0" 0 frame 6 6
 $animation "look_u_pos" "anims/first_person overlays.smd" fps 30 rotate -90 subtract "idle_0" 0 frame 3 3
 $animation "look_d" "anims/first_person overlays.smd" fps 30 rotate -90 subtract "idle_0" 0 frame 7 7
@@ -155,6 +157,11 @@ $sequence "look_pitch_s" {
 $sequence "fire_1 var1" {
 	"anims\first_person fire_1 var1.smd"
 	activity "ACT_VM_PRIMARYATTACK" 1
+	addlayer look_x
+	addlayer look_x_pos
+	addlayer look_y
+	addlayer look_y_pos
+	addlayer look_pitch_s
 	fadein 0.05
 	fadeout 0.2
 	node "1"
@@ -192,8 +199,26 @@ $sequence "fire_1 var3" {
 	fps 30
 }
 
-$sequence "reload" {
+$sequence "o_h_start" {
+	"anims\first_person overheating.smd"
+	activity "ACT_VM_RELOAD" 1
+	fadein 0.2
+	fadeout 0.2
+	rotate -90
+	fps 30
+}
+
+$sequence "o_h_loop" {
 	"anims\first_person overheated.smd"
+	activity "ACT_VM_RELOAD" 1
+	fadein 0.2
+	fadeout 0.2
+	rotate -90
+	fps 30
+}
+
+$sequence "o_h_exit" {
+	"anims\first_person o_h_exit.smd"
 	activity "ACT_VM_RELOAD" 1
 	fadein 0.2
 	fadeout 0.2
