@@ -178,16 +178,16 @@ SWEP.Animations				= {
 		Events = {
 			{ t = 0.0,			s = {halo.."in.wav",halo.."in2.wav",halo.."in3.wav"} },
 		},
-		ShotgunReloadingTime = 1.5,
+		ShotgunReloadingTime = 59/30,
 	},
 	["sgreload_insert"] = {
 		Source = "o_h_loop",
 		Events = {
 			-- { t = 0.0,			s = halo.."loop.wav" },
 		},
-		LoadIn = 0.2,
-		AmountToLoad = 1,
-		ShotgunReloadingTime = 0.3,
+		LoadIn = 0.4,
+		AmountToLoad = 4,
+		ShotgunReloadingTime = 0.5,
 	},
 	["sgreload_finish"] = {
 		Source = "o_h_exit",

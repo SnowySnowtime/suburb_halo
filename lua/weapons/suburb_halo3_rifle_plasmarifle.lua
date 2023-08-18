@@ -104,6 +104,8 @@ firing
 	>> deceleration time 0.6 seconds
 --]]
 
+SWEP.ShotgunReloading		= true -- Set to 0 when battery base is ready. Probably.
+
 SWEP.Firemodes				= {
 	{
 		Mode = 2,
@@ -191,25 +193,36 @@ SWEP.Animations				= {
 		Source = {"fire_1 var1", "fire_1 var2", "fire_1 var3"},
 		ShellEjectTime = 0,
 	},
-	["reload"]	= {
-		Source = "reload",
+	["sgreload_start"] = {
+		Source = "o_h_start",
 		Events = {
-			{ t = 0.1,			s = {halo.."ar_reload0-0.wav",halo.."ar_reload1-0.wav"} },
-			{ t = 0.9,			s = {halo.."ar_reload0-1.wav",halo.."ar_reload1-1.wav"} },
-			{ t = 1.425,			s = {halo.."ar_reload0-2.wav",halo.."ar_reload1-2.wav",halo.."ar_reload2-2.wav"} },
+			{ t = 0.0,			s = {halo.."plasrifle_overheat.wav"} },
 		},
-		ReloadingTime = 2.0,
-		LoadIn = 1.5,
+		ShotgunReloadingTime = 59/30,
 	},
-	["reload_empty"] = {
-		Source = "reload",
+	["sgreload_insert"] = {
+		Source = "o_h_loop",
 		Events = {
-			{ t = 0.1,			s = {halo.."ar_reload0-0.wav",halo.."ar_reload1-0.wav"} },
-			{ t = 0.9,			s = {halo.."ar_reload0-1.wav",halo.."ar_reload1-1.wav"} },
-			{ t = 1.425,			s = {halo.."ar_reload0-2.wav",halo.."ar_reload1-2.wav",halo.."ar_reload2-2.wav"} },
+			-- { t = 0.0,			s = halo.."loop.wav" },
 		},
-		ReloadingTime = 2.0,
-		LoadIn = 1.5,
+		LoadIn = 0.4,
+		AmountToLoad = 32,
+		ShotgunReloadingTime = 0.45,
+	},
+	["sgreload_finish"] = {
+		Source = "o_h_exit",
+		Events = {
+			{ t = 0.0,			s = halo.."plasrifle_oh_exit.wav" },
+		},
+		ReloadingTime = 1,
+	},
+	["sgreload_finish_empty"] = {
+		Source = "o_h_exit",
+		Time = 1,
+		Events = {
+			{ t = 0.0,			s = halo.."plasrifle_oh_exit.wav" },
+		},
+		ReloadingTime = 1,
 	},
 }
 
