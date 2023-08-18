@@ -150,6 +150,22 @@ sound.Add(
 	}
 })
 
+sound.Add(
+{
+    name = "spiker.uc.fire",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 115,
+	pitch = {98,102},
+    sound = {halo..sp.."spiker_fire1.wav",
+	halo..sp.."spiker_fire2.wav",
+	halo..sp.."spiker_fire3.wav",
+	halo..sp.."spiker_fire4.wav",
+	halo..sp.."spiker_fire5.wav",
+	halo..sp.."spiker_fire6.wav",
+	}
+})
+
 --[[
 funny
 --]]
