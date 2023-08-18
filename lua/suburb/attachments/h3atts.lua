@@ -2,8 +2,6 @@
 	Conversions
 --]]
 
-local m7s = ")snowysnowtime/h3/smg/"
-
 local att = {}
 att.Name = "Socom"
 att.SortOrder = 1
@@ -15,6 +13,14 @@ att.Hook_Sound_TailEXT = UC.func.sound_tailext
 att.Hook_Sound_TailINT = UC.func.sound_tailint
 
 Suburb_GenAtt(att, "m7_socom")
+
+local att = {}
+att.Name = "Brute"
+att.SortOrder = 1
+att.ShortName = "Brute"
+att.Slot = "h3pr"
+
+Suburb_GenAtt(att, "bruteplasma")
 
 --[[
 	Grenades

@@ -1,0 +1,8 @@
+"UnlitGeneric"
+{
+	"$basetexture" "models/snowysnowtime/suburb/halo/rifles/plasmarifle/plasma_rifle_gauge"
+	"$color2" "[0 0.7 3]"
+	"$decal" "1"
+	"$additive" "1"
+	"$model" 1
+}

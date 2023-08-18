@@ -84,6 +84,16 @@ sound.Add(
 
 sound.Add(
 {
+    name = "plasmarifle.uc.fire",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    soundlevel = 115,
+	pitch = {98,102},
+    sound = halo..pr.."plas_rifle_fire.wav",
+})
+
+sound.Add(
+{
     name = "shotgun.uc.fire",
     channel = CHAN_STATIC,
     volume = 1.0,
