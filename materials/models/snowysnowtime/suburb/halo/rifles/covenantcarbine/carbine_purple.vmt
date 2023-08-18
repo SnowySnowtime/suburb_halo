@@ -9,7 +9,6 @@
 	"$phongexponenttexture" "models/snowysnowtime/suburb/halo/rifles/covenantcarbine/covenant_carbine_exp"
 	"$phongtint" "{110 36 139}"
 	"$phongfresnelranges" "[1 0.1 -0.3]"
-	"$phongdisablehalflambert" "1"
 	"$rimlight"	1
 	"$rimlightpower"	10
 	"$rimmask"	1
