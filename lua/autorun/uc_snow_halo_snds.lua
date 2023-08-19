@@ -9,7 +9,6 @@ local es 	= "energysword/"
 local flk 	= "flakcannon/"
 local flmp 	= "flag/"
 local gh 	= "gravityhammer/"
-local m6c 	= "automag/"
 local mlr 	= "mauler/"
 local ndlr 	= "needler/"
 local ob 	= "oddball/"
@@ -26,12 +25,16 @@ local sr 	= "sniperrifle/"
 
 local shrd 	= "shared/"
 
+--[[
+rifles
+--]]
+
 sound.Add(
 {
     name = "assaultrifle.uc.fire",
     channel = CHAN_STATIC,
     volume = 1.0,
-    soundlevel = 115,
+    level = 140,
 	pitch = {98,102},
     sound = {halo..ar.."19103_b.wav",
 	halo..ar.."19203_b.wav",
@@ -44,7 +47,7 @@ sound.Add(
     name = "battlerifle.uc.fire",
     channel = CHAN_STATIC,
     volume = 1.0,
-    soundlevel = 115,
+    level = 140,
 	pitch = {98,102},
     sound = {halo..br.."battle_rifle_fire1.wav",
 	halo..br.."battle_rifle_fire2.wav",
@@ -62,7 +65,7 @@ sound.Add(
     name = "beamrifle.uc.fire",
     channel = CHAN_STATIC,
     volume = 1.0,
-    soundlevel = 115,
+    level = 140,
 	pitch = {98,102},
     sound = {halo..beam.."cov_snip_shot9.wav",
 	halo..beam.."cov_snip_shot10.wav",
@@ -74,7 +77,7 @@ sound.Add(
     name = "covenantcarbine.uc.fire",
     channel = CHAN_STATIC,
     volume = 1.0,
-    soundlevel = 115,
+    level = 140,
 	pitch = {98,102},
     sound = {halo..car.."carbine_atlas1.wav",
 	halo..car.."carbine_atlas2.wav",
@@ -87,7 +90,7 @@ sound.Add(
     name = "plasmarifle.uc.fire",
     channel = CHAN_STATIC,
     volume = 1.0,
-    soundlevel = 115,
+    level = 140,
 	pitch = {98,102},
     sound = halo..pr.."plas_rifle_fire.wav",
 })
@@ -97,7 +100,7 @@ sound.Add(
     name = "shotgun.uc.fire",
     channel = CHAN_STATIC,
     volume = 1.0,
-    soundlevel = 115,
+    level = 140,
 	pitch = {98,102},
     sound = {halo..sg.."shotgun1.wav",
 	halo..sg.."shotgun2.wav",
@@ -128,7 +131,7 @@ sound.Add(
     name = "smgsocom.uc.fire",
     channel = CHAN_STATIC,
     volume = 1.0,
-    soundlevel = 115,
+    level = 70,
 	pitch = {98,102},
     sound = {halo..smg.."smg_recon1.wav",
 	halo..smg.."smg_recon2.wav",
@@ -141,7 +144,7 @@ sound.Add(
     name = "sniperrifle.uc.fire",
     channel = CHAN_STATIC,
     volume = 1.0,
-    soundlevel = 115,
+    level = 140,
 	pitch = {98,102},
     sound = {halo..sr.."sniper_fire_h3_1.wav",
 	halo..sr.."sniper_fire_h3_2.wav",
@@ -155,7 +158,7 @@ sound.Add(
     name = "spiker.uc.fire",
     channel = CHAN_STATIC,
     volume = 1.0,
-    soundlevel = 115,
+    level = 140,
 	pitch = {98,102},
     sound = {halo..sp.."spiker_fire1.wav",
 	halo..sp.."spiker_fire2.wav",
@@ -163,6 +166,38 @@ sound.Add(
 	halo..sp.."spiker_fire4.wav",
 	halo..sp.."spiker_fire5.wav",
 	halo..sp.."spiker_fire6.wav",
+	}
+})
+
+--[[
+pistols
+--]]
+
+sound.Add(
+{
+    name = "magnum.uc.fire",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+	level = 140,
+	pitch = {98,102},
+    sound = {halo..pist.."magnum_stereo1.wav",
+	halo..pist.."magnum_stereo2.wav",
+	halo..pist.."magnum_stereo3.wav",
+	halo..pist.."magnum_stereo4.wav",
+	}
+})
+
+sound.Add(
+{
+    name = "magnumsocom.uc.fire",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 70,
+	pitch = {98,102},
+    sound = {halo..pist.."magnum_silenced12.wav",
+	halo..pist.."magnum_silenced11.wav",
+	halo..pist.."magnum_silenced10.wav",
+	halo..pist.."magnum_silenced9.wav",
 	}
 })
 
@@ -175,7 +210,7 @@ sound.Add(
     name = "halo.uc.grenade_throw_generic",
     channel = CHAN_STATIC,
     volume = 1.0,
-    soundlevel = 115,
+    level = 70,
 	pitch = {98,102},
     sound = {halo..shrd.."claymore_thrown.wav",
 	halo..shrd.."frag_thrown.wav",

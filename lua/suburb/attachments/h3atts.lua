@@ -22,6 +22,36 @@ att.Slot = "h3pr"
 
 Suburb_GenAtt(att, "bruteplasma")
 
+local att = {}
+att.Name = "Socom (H3 Stats)"
+att.SortOrder = 0
+att.ShortName = "Socom"
+att.Slot = "m6s"
+
+att.Mult_Delay = 0.7
+att.Mult_Capacity = 1.5
+
+att.Hook_Sound_Blast = UC.func.sound_blast
+att.Hook_Sound_TailEXT = UC.func.sound_tailext
+att.Hook_Sound_TailINT = UC.func.sound_tailint
+
+Suburb_GenAtt(att, "m6_socom_mcc")
+
+local att = {}
+att.Name = "Socom (ODST Stats)"
+att.SortOrder = 1
+att.ShortName = "Socom"
+att.Slot = "m6s"
+
+att.Mult_Delay = 0.1875
+att.Mult_Capacity = 1.5
+
+att.Hook_Sound_Blast = UC.func.sound_blast
+att.Hook_Sound_TailEXT = UC.func.sound_tailext
+att.Hook_Sound_TailINT = UC.func.sound_tailint
+
+Suburb_GenAtt(att, "m6_socom_odst")
+
 --[[
 	Grenades
 --]]
