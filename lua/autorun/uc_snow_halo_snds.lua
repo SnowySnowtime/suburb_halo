@@ -9,7 +9,7 @@ local es 	= "energysword/"
 local flk 	= "flakcannon/"
 local flmp 	= "flag/"
 local gh 	= "gravityhammer/"
-local mlr 	= "mauler/"
+local mlr 	= "excavator/"
 local ndlr 	= "needler/"
 local ob 	= "oddball/"
 local pist 	= "magnum/"
@@ -175,6 +175,19 @@ pistols
 
 sound.Add(
 {
+    name = "excavator.uc.fire",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+	level = 140,
+	pitch = {98,102},
+    sound = {halo..mlr.."excavator1.wav",
+	halo..mlr.."excavator2.wav",
+	halo..mlr.."excavator3.wav",
+	}
+})
+
+sound.Add(
+{
     name = "magnum.uc.fire",
     channel = CHAN_STATIC,
     volume = 1.0,
@@ -198,6 +211,19 @@ sound.Add(
 	halo..pist.."magnum_silenced11.wav",
 	halo..pist.."magnum_silenced10.wav",
 	halo..pist.."magnum_silenced9.wav",
+	}
+})
+
+sound.Add(
+{
+    name = "needler.uc.fire",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+	level = 140,
+	pitch = {98,102},
+    sound = {halo..ndlr.."needlefire11.wav",
+	halo..ndlr.."needlefire12.wav",
+	halo..ndlr.."needlefire13.wav",
 	}
 })
 

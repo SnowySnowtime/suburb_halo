@@ -165,7 +165,7 @@ SWEP.Animations				= {
 	["draw"]	= {
 		Source = "ready",
 		Events = {
-			{ t = 0.0,			s = {halo.."ar_readya.wav",halo.."ar_readyb.wav",halo.."ar_readyc.wav"} },
+			{ t = 0.0,			s = {halo.."plasrifle_ready.wav"} },
 		},
 		ReloadingTime = 0.3,
 		StopSightTime = 0.1,

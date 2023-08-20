@@ -252,3 +252,12 @@ SWEP.Elements = {
 		Bodygroups = { [1] = 1 }
 	},
 }
+
+function SWEP:TranslateAnimation( data )
+	local ae = self.ActivatedElements
+	if data.anim == "fire" then
+		if ae["socom"] then
+			data.anim = "fire_automag"
+		end
+	end
+end

@@ -5,7 +5,7 @@
 	"$additive" "1"
 	"$color2" "[0 0 0]"
 	"$phong" "1" 
-	"$phongboost" "25.9934895"
+	"$phongboost" "75.9934895"
 	"$phongexponenttexture" "models/snowysnowtime/suburb/halo/rifles/plasmarifle/plasma_rifle_exp"
 	"$phongtint" "{89 9 31}"
 	"$phongfresnelranges" "[1 0.5 -0.3]"
@@ -17,7 +17,7 @@
 	"$envmapfallback"   "models/snowysnowtime/suburb/envmap_fallback"
 	"$envmaptint" "[ 1 1 1 ]"
 	"$cubemaptint"	"{89 9 31}"
-	"$cubemappower"	2
+	"$cubemappower"	5
 
 	Proxies
 	{

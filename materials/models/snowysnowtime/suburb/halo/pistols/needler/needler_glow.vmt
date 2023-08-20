@@ -1,0 +1,6 @@
+"UnLitGeneric"
+{
+	"$basetexture" "models/snowysnowtime/suburb/halo/pistols/needler/needler_illum"
+	"$color2" "{510 234 440}"
+	"$additive" "1"
+}

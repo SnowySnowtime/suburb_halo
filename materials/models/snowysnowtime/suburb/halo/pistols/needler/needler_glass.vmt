@@ -1,0 +1,22 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "lights/white"
+	"$color2" "[0 0 0]"
+	"$additive" "1"
+	"$nocull" "0"
+	"$envmap" 			"models/snowysnowtime/suburb/envmap_fallback"
+	"$envmapfallback"   "models/snowysnowtime/suburb/envmap_fallback"
+	"$envmaptint" "[ 1 0.85 1 ]"
+	"$cubemaptint"	"[ 1 0.85 1 ]"
+	"$cubemappower"	1
+	"$cmmin" 0.2
+	"$cmmax" 1
+
+	Proxies
+	{
+		drc_ReflectionTint
+		{
+			resultVar $envmaptint
+		}
+	}
+}

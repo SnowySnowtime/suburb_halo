@@ -61,7 +61,7 @@ $animation "walk_back" "anims/first_person moving_reversed.smd" fps 60 subtract 
 $animation "look_rest" "anims/first_person overlays.smd" fps 30 rotate -90 frame 0 0
 $animation "pitch_rest" "anims/first_person pitch_and_turn.smd" fps 30 rotate -90 frame 0 0
 
-$animation "look_0" "anims/first_person overlays.smd" fps 30 rotate -90 subtract "look_rest" 0 frame 6 6
+$animation "look_0" "anims/first_person overlays.smd" fps 30 rotate -90 subtract "look_rest" 0 frame 0 0
 $animation "look_r" "anims/first_person overlays.smd" fps 30 rotate -90 subtract "look_rest" 0 frame 9 9
 $animation "look_r_pos" "anims/first_person overlays.smd" fps 30 rotate -90 subtract "look_rest" 0 frame 4 4
 $animation "look_l" "anims/first_person overlays.smd" fps 30 rotate -90 subtract "look_rest" 0 frame 10 10
@@ -69,8 +69,8 @@ $animation "look_l_pos" "anims/first_person overlays.smd" fps 30 rotate -90 subt
 $animation "look_u" "anims/first_person overlays.smd" fps 30 rotate -90 subtract "look_rest" 0 frame 7 7
 $animation "look_d" "anims/first_person overlays.smd" fps 30 rotate -90 subtract "look_rest" 0 frame 8 8
 
-$animation "look_u_pos" "anims/first_person overlays.smd" fps 30 rotate -90 subtract "look_rest" 0 frame 1 1
-$animation "look_d_pos" "anims/first_person overlays.smd" fps 30 rotate -90 subtract "look_rest" 0 frame 2 2
+$animation "look_u_pos" "anims/first_person overlays.smd" fps 30 rotate -90 subtract "look_rest" 0 frame 2 2
+$animation "look_d_pos" "anims/first_person overlays.smd" fps 30 rotate -90 subtract "look_rest" 0 frame 3 3
 
 $animation "look_pitch_2" "anims/first_person pitch_and_turn.smd" fps 30 rotate -90 subtract "pitch_rest" 0 frame 7 7
 $animation "look_pitch_0" "anims/first_person pitch_and_turn.smd" fps 30 rotate -90 subtract "pitch_rest" 0 frame 0 0

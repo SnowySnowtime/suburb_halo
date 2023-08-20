@@ -5,7 +5,7 @@
 	"$additive" "1"
 	"$color2" "[0 0 0]"
 	"$phong" "1" 
-	"$phongboost" "20.9934895"
+	"$phongboost" "30.9934895"
 	"$phongexponenttexture" "models/snowysnowtime/suburb/halo/rifles/plasmarifle/plasma_rifle_exp_alt"
 	"$phongfresnelranges" "[-1 -0.25 1]"
 	"$phongtint" "{199 69 20}"

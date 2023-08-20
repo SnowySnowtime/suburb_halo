@@ -1,0 +1,26 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models/snowysnowtime/suburb/halo/pistols/needler/needler"
+	"$bumpmap" "models/snowysnowtime/suburb/halo/pistols/needler/needler_bump"
+	"$additive" "1"
+	"$color2" "[0 0 0]"
+	"$phong" "1" 
+	"$phongboost" "3.9934895"
+	"$phongexponenttexture" "models/snowysnowtime/suburb/halo/pistols/needler/needler_exp"
+	"$phongfresnelranges" "[-1 -0.25 1]"
+	"$phongtint" "{255 171 0}"
+	"$envmap" 			"env_cubemap"
+	"$envmapfallback"   "models/snowysnowtime/suburb/envmap_fallback"
+	"$envmaptint" "[ 1 1 1 ]"
+	"$cubemaptint"	"{255 171 0}"
+	"$envmapfresnel"	"1"
+	"$cubemappower"	0.2
+
+	Proxies
+	{
+		drc_ReflectionTint
+		{
+			resultVar $envmaptint
+		}
+	}
+}

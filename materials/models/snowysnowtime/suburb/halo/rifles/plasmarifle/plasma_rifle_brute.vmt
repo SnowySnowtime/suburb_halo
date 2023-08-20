@@ -8,7 +8,7 @@
 	"$selfillum" "1"
 	"$color2" "[0.87 0.87 0.87]"
 	"$phong" "1" 
-	"$phongboost" "15.9934895"
+	"$phongboost" "25.9934895"
 	"$phongexponenttexture" "models/snowysnowtime/suburb/halo/rifles/plasmarifle/plasma_rifle_exp_alt"
 	"$phongalbedotint" "1"
 	"$phongalbedoboost"          "1"
@@ -19,8 +19,8 @@
 	"$envmap" 			"env_cubemap"
 	"$envmapfallback"   "models/snowysnowtime/suburb/envmap_fallback"
 	"$envmaptint" "[ 1 1 1 ]"
-	"$cubemaptint"	"[ 0.3137254901960784 0.3490196078431373 0.4549019607843137 ]"
-	"$cubemappower"	0.2
+	"$cubemaptint"	"{252 222 175}"
+	"$cubemappower"	0.25
 
 	Proxies
 	{
