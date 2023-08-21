@@ -1,0 +1,48 @@
+"UnLitGeneric"
+{
+	"$basetexture" "models/snowysnowtime/suburb/halo/rifles/plasmarifle/plasma_current_noise_a"
+	"$detail" "models/snowysnowtime/suburb/halo/pistols/plasmapistol/cloud_1"
+	"$nocull" "1"
+	"$additive" "1"
+	"$detailscale" "3"
+	"$detailblendfactor" "1"
+	"$detailblendmode" "4"
+	"$color2" "[ 4 10 2 ]"
+	"$detailtint" "[ 0 0.7 10 ]"
+	"$angle" 0.0
+	"$baseangle" 0.0
+	"$scale" "[1 1]"
+	"$basescale" "[1 1]"
+	"$center" "[8 9]"
+	"$basecenter" "[60 70]"
+
+	Proxies
+	{
+		LinearRamp
+		{
+			"rate" -1
+			"initialValue" 0.0
+			"resultVar" "$angle"
+		}
+		LinearRamp
+		{
+			"rate" 20
+			"initialValue" 0.0
+			"resultVar" "$baseangle"
+		}
+        "TextureTransform"
+		{
+			"translateVar" "[0 0]"
+            "rotateVar" "$angle"
+            "centerVar" "$center"
+			"scaleVar"	"$scale"
+            "resultVar" "$detailtexturetransform"
+        }
+		TextureScroll
+		{
+			"textureScrollRate" 1
+			"textureScrollAngle" -90
+			"textureScrollVar" "$basetexturetransform"
+		}
+	}
+}
