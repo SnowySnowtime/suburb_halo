@@ -8,7 +8,7 @@ SWEP.Spawnable				= true
 SWEP.PrintName				= "Plasma Pistol"
 SWEP.Category				= "Cosmic Decay" -- sounds funny (ffrom stan_jacobs), likely wont keep but good for organizing
 SWEP.Description			= [[Type-25 Directed Energy Pistol]]
-SWEP.Slot					= 2
+SWEP.Slot					= 1
 
 --
 -- Appearance
@@ -45,19 +45,19 @@ SWEP.HoldTypeSight			= "rpg"
 SWEP.HoldTypeSprint			= "passive"
 
 local p0 = ")arccw_uc/common/"
-local halo = ")snowysnowtime/h3/plasmarifle/"
+local halo = ")snowysnowtime/h3/plasmapistol/"
 SWEP.Sound_Blast			= {
-	{ s = "plasmarifle.uc.fire" },
+	{ s = "plasmapistol.uc.fire" },
 }
 SWEP.Sound_TailEXT				= {
-	{ s = halo.."plas_rifle_tail_ext1.wav" },
-	{ s = halo.."plas_rifle_tail_ext2.wav" },
-	{ s = halo.."plas_rifle_tail_ext3.wav" },
+	{ s = halo.."plasma_pistol_tail_ext1.wav" },
+	{ s = halo.."plasma_pistol_tail_ext2.wav" },
+	{ s = halo.."plasma_pistol_tail_ext3.wav" },
 }
 SWEP.Sound_TailINT				= {
-	{ s = halo.."plas_rifle_tail_int1.wav" },
-	{ s = halo.."plas_rifle_tail_int2.wav" },
-	{ s = halo.."plas_rifle_tail_int3.wav" },
+	{ s = halo.."plasma_pistol_tail_int1.wav" },
+	{ s = halo.."plasma_pistol_tail_int2.wav" },
+	{ s = halo.."plasma_pistol_tail_int3.wav" },
 }
 
 SWEP.MuzzleEffect						= "muzzleflash_1"
@@ -146,7 +146,7 @@ SWEP.Animations				= {
 	["draw"]	= {
 		Source = "ready",
 		Events = {
-			{ t = 0.0,			s = {halo.."plasrifle_ready.wav"} },
+			{ t = 0.0,			s = {halo.."plasma_pistol_ready_1.wav",halo.."plasma_pistol_ready_2.wav",halo.."plasma_pistol_ready_3.wav",halo.."plasma_pistol_ready_4.wav",halo.."plasma_pistol_ready_5.wav"} },
 		},
 		ReloadingTime = 0.3,
 		StopSightTime = 0.1,
@@ -177,23 +177,23 @@ SWEP.Animations				= {
 	["sgreload_start"] = {
 		Source = "o_h_start",
 		Events = {
-			{ t = 0.0,			s = {halo.."plasrifle_overheat.wav"} },
+			{ t = 0.0,			s = {halo.."plasma_pistol_overheat_ready_1.wav",halo.."plasma_pistol_overheat_ready_2.wav",halo.."plasma_pistol_overheat_ready_3.wav"} },
+			{ t = 0.0,			s = {halo.."plaspistol_overheat.wav"} },
 		},
-		ShotgunReloadingTime = 59/30,
 	},
 	["sgreload_insert"] = {
 		Source = "o_h_loop",
 		Events = {
 			-- { t = 0.0,			s = halo.."loop.wav" },
 		},
-		LoadIn = 0.4,
+		LoadIn = 1.1,
 		AmountToLoad = 32,
-		ShotgunReloadingTime = 0.45,
+		ShotgunReloadingTime = 1.15,
 	},
 	["sgreload_finish"] = {
 		Source = "o_h_exit",
 		Events = {
-			{ t = 0.0,			s = halo.."plasrifle_oh_exit.wav" },
+			{ t = 0.0,			s = {halo.."plasma_pistol_overheat_exit_1.wav",halo.."plasma_pistol_overheat_exit_2.wav",halo.."plasma_pistol_overheat_exit_3.wav"} },
 		},
 		ReloadingTime = 1,
 	},
@@ -201,7 +201,7 @@ SWEP.Animations				= {
 		Source = "o_h_exit",
 		Time = 1,
 		Events = {
-			{ t = 0.0,			s = halo.."plasrifle_oh_exit.wav" },
+			{ t = 0.0,			s = {halo.."plasma_pistol_overheat_exit_1.wav",halo.."plasma_pistol_overheat_exit_2.wav",halo.."plasma_pistol_overheat_exit_3.wav"} },
 		},
 		ReloadingTime = 1,
 	},

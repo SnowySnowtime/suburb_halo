@@ -227,6 +227,22 @@ sound.Add(
 	}
 })
 
+sound.Add(
+{
+    name = "plasmapistol.uc.fire",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    level = 140,
+	pitch = {98,102},
+    sound = {halo..pp.."plasmarifle1_ster.wav",
+	halo..pp.."plasmarifle2_ster.wav",
+	halo..pp.."plasmarifle3_ster.wav",
+	halo..pp.."plasmarifle4_ster.wav",
+	halo..pp.."plasmarifle5_ster.wav",
+	}
+})
+
+
 --[[
 funny
 --]]
