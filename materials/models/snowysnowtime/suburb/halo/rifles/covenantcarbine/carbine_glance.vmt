@@ -17,7 +17,7 @@
 	"$envmaptint" "[ 1 1 1 ]"
 	"$cubemaptint"	"{199 110 20}"
 	"$envmapfresnel"	"1"
-	"$cubemappower"	0.15
+	"$cubemappower"	0.25
 
 	Proxies
 	{

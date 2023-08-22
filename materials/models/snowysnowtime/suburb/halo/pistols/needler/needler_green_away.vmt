@@ -9,12 +9,12 @@
 	"$phongexponenttexture" "models/snowysnowtime/suburb/halo/pistols/needler/needler_exp"
 	"$phongfresnelranges" "[-1 -0.25 5]"
 	"$phongtint" "{229 175 79}"
-	"$envmap" 			"env_cubemap"
+	"$envmap" 			"models/snowysnowtime/suburb/envmap_fallback"
 	"$envmapfallback"   "models/snowysnowtime/suburb/envmap_fallback"
 	"$envmaptint" "[ 1 1 1 ]"
 	"$cubemaptint"	"{229 175 79}"
 	"$envmapfresnel"	"1"
-	"$cubemappower"	0.2
+	"$cubemappower"	0.5
 
 	Proxies
 	{

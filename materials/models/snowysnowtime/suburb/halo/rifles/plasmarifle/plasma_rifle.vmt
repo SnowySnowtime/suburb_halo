@@ -20,7 +20,7 @@
 	"$envmapfallback"   "models/snowysnowtime/suburb/envmap_fallback"
 	"$envmaptint" "[ 1 1 1 ]"
 	"$cubemaptint"	"{175 222 252}"
-	"$cubemappower"	0.25
+	"$cubemappower"	0.3
 
 	Proxies
 	{
