@@ -18,7 +18,7 @@
 	"$rimmask"	1
 	"$envmap" 			"env_cubemap"
 	"$envmapfallback"   "models/snowysnowtime/suburb/envmap_fallback"
-	"$envmaptint" "[ 1 1 1 ]"
+	"$envmaptint" "{2.52 2.22 1.75}"
 	"$cubemaptint"	"{252 222 175}"
 	"$cubemappower"	0.25
 

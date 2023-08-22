@@ -11,7 +11,7 @@
 	"$phongfresnelranges" "[2 0.5 -0.3]"
 	"$envmap" 			"models/snowysnowtime/suburb/envmap_fallback"
 	"$envmapfallback"   "models/snowysnowtime/suburb/envmap_fallback"
-	"$envmaptint" "[ 1 1 1 ]"
+	"$envmaptint" "{129 152 109}"
 	"$cubemaptint"	"{129 152 109}"
 	"$cubemappower"	0.75
 

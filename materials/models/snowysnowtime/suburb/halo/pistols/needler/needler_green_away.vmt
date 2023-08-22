@@ -11,7 +11,7 @@
 	"$phongtint" "{229 175 79}"
 	"$envmap" 			"models/snowysnowtime/suburb/envmap_fallback"
 	"$envmapfallback"   "models/snowysnowtime/suburb/envmap_fallback"
-	"$envmaptint" "[ 1 1 1 ]"
+	"$envmaptint" "{2.29 1.75 .79}"
 	"$cubemaptint"	"{229 175 79}"
 	"$envmapfresnel"	"1"
 	"$cubemappower"	0.5

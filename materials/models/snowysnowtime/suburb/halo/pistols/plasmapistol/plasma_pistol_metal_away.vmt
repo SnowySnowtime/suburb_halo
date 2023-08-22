@@ -9,9 +9,9 @@
 	"$phongexponenttexture" "models/snowysnowtime/suburb/halo/pistols/plasmapistol/plasma_pistol_exp"
 	"$phongfresnelranges" "[-2 -0.5 2]"
 	"$phongtint" "{242 141 71}"
-	"$envmap" 			"env_cubemap"
+	"$envmap" 			"models/snowysnowtime/suburb/envmap_fallback"
 	"$envmapfallback"   "models/snowysnowtime/suburb/envmap_fallback"
-	"$envmaptint" "[ 1 1 1 ]"
+	"$envmaptint" "{242 141 71}"
 	"$cubemaptint"	"{242 141 71}"
 	"$envmapfresnel"	"1"
 	"$cubemappower"	1
